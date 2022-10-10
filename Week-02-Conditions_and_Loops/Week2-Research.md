@@ -35,7 +35,26 @@ for (const i of arr) {
 }
 ```
 
+when should you use this loop?
+Only use this loop, when you intend to get the values of specific properties in an Object.
+
+
 3. What is the syntax of another one of the loops in your above answer? How and when should you use this loop? Give an example.
+```
+while (condition)
+  statement
+```
+
+ A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows: 
+
+ ```
+let n = 0;
+let x = 0;
+while (n < 3) {
+    n++;
+    x += n;
+}
+```
 
 4. What is the syntax of another one of the loops in your above answer? How and when should you use this loop? Give an example.
 
