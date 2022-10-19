@@ -32,7 +32,7 @@ var openDoor = true;
  * alarmSet, false; openDoor, false; Ok
  */
 
-if (alarmSet === true && openDoor === true) {
+if (alarmSet && openDoor) {
     console.log("Sound Alarm!");
 } else {
     console.log("Everything is fine.");
@@ -63,20 +63,22 @@ if ((username === "Tommy123" && password === "12345") ||
 // 12 Senior
 // Anything other than these values will return "Error" to the console
 
-const key = {
-    "K": "Elementary",
-    "1": "Elementary",
-    "2": "Elementary",
-    "3": "Elementary",
-    "4": "Elementary",
-    "5": "Elementary",
-    "6": "Elementary",
-    "7": "Middle",
-    "8": "Middle",
-    "9": "Freshman",
-    "10": "Sophmore",
-    "11": "Junior",
-    "12": "Senior"
+var studentClass;
+var studentGrade;
+
+switch(studentGrade){
+    case "K":
+    1
+    2
+    3
+    4
+    5
+    6
+    7
+    8
+    9
+    10
+    11
+    12
 }
 
-var studentClass = 
