@@ -13,53 +13,63 @@
 
 
 2. What is the syntax of one of the loops in your above answer? How and when should you use this loop? Give an example.
-The for...of statement creates a loop Iterating over iterable objects (including Array, Map, Set, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property. 
+    The for...of statement creates a loop Iterating over iterable objects (including Array, Map, Set, arguments object and so on), invoking a custom iteration hook with statements to be executed for the value of each distinct property. 
 
-```
-for (variable of object)
-    statement
-```
+    ```
+    for (variable of object)
+        statement
+    ```
 
-The following example shows the difference between a for...of loop and a for...in loop. While for...in iterates over property names, for...of iterates over property values:
+    The following example shows the difference between a for...of loop and a for...in loop. While for...in iterates over property names, for...of iterates over property values:
 
-```
-const arr = [3, 5, 7];
-arr.foo = 'hello';
+    ```
+    const arr = [3, 5, 7];
+    arr.foo = 'hello';
 
-for (const i in arr) {
-    console.log(i); // logs "0", "1", "2", "foo"
-}
+    for (const i in arr) {
+        console.log(i); // logs "0", "1", "2", "foo"
+    }
 
-for (const i of arr) {
-    console.log(i); // logs 3, 5, 7
-}
-```
+    for (const i of arr) {
+        console.log(i); // logs 3, 5, 7
+    }
+    ```
 
-when should you use this loop?
-Only use this loop, when you intend to get the values of specific properties in an Object.
+    when should you use this loop?
+    Only use this loop, when you intend to get the values of specific properties in an Object.
 
 
 3. What is the syntax of another one of the loops in your above answer? How and when should you use this loop? Give an example.
-```
-while (condition)
-  statement
-```
+    ```
+    while (condition)
+    statement
+    ```
 
- A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows: 
+    A while statement executes its statements as long as a specified condition evaluates to true. A while statement looks as follows: 
 
- ```
-let n = 0;
-let x = 0;
-while (n < 3) {
-    n++;
-    x += n;
-}
-```
+    ```
+    let n = 0;
+    let x = 0;
+    while (n < 3) {
+        n++;
+        x += n;
+    }
+    ```
 
 4. What is the syntax of another one of the loops in your above answer? How and when should you use this loop? Give an example.
+    ```
+    label:
+        statement
+    ```
+
+    the label statement lets you refer to 
+
+    A label provides a statement with an identifier that lets you refer to it elsewhere in your program. For example, you can use a label to identify a loop, and   then use the break or continue statements to indicate whether a program should interrupt the loop or continue its execution.
+
+    Not exactly a loop, but can be used as a way to create one. You can use this to go back to an earlier portion of code. This particular loop would be considered bad practice as functions should be used in its place. 
 
 5. What is your favorite thing you learned this week?
-
+    Favorite thing I learned is the versatility of loops and the number of them that exist.
 
 Instructions
 
