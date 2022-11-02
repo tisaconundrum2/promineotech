@@ -75,9 +75,35 @@ console.log(average)
 2 . Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
 - Use a loop to iterate through the array and calculate the average number of letters per name. 
 - Use a loop to iterate through the array again and concatenate all the names together, separated by spaces. 
+```
+var names = ['Sam', 'Sam', 'Tommy', 'Tim', 'Sally', 'Buck', 'Bob']
+
+var sum = 0
+var count = 0
+for (const name of names) {
+    sum += name.length;
+    count += 1;
+}
+console.log(sum/count)
+
+nameString = "";
+for (const name of names) {
+    nameString += name + " "
+}
+console.log(nameString)
+```
+```
+"C:\Program Files\nodejs\node.exe" ".\Week 3 - Coding Assignment.js"
+3.7142857142857144
+```
 
 3 .	How do you access the last element of any array?
+You can access the element by utilizing array.length property, which gives you the total size of the array.
+You can then use a bracket `[]` with th `array.length` inside to get the last element.
+
 4 .	How do you access the first element of any array?
+You can simply use `[0]` to get the first element.
+
 5 .	Create a new array called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 For example:
 ```
@@ -85,7 +111,25 @@ namesArray = ["Kelly", "Sam", "Kate"] //given this array
 nameLengths = [5, 3, 4] //create this new array
 ```
 
+```
+// Create a new array called nameLengths. 
+// Write a loop to iterate over the previously created names array 
+// add the length of each name to the nameLengths array.
+
+
+var namesArray = ["Kelly", "Sam", "Kate"] //given this array
+var nameLengths = [] //create this new array
+
+for (const name of namesArray) {
+    nameLengths += name.length;
+}
+console.log(nameLengths)
+```
+
 6 .	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. 
+```
+
+```
 
 7 . Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
 
