@@ -53,6 +53,7 @@ console.log(ages[lastEl] - ages[0])
 "C:\Program Files\nodejs\node.exe" ".\Week 3 - Coding Assignment.js"
 49
 ```
+
 c. Use a loop to iterate through the array and calculate the average age. 
 
 ```
