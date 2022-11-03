@@ -95,8 +95,9 @@ console.log(nameString)
 ```
 
 ```
-"C:\Program Files\nodejs\node.exe" ".\Week 3 - Coding Assignment.js"
+C:\Program Files\nodejs\node.exe .\test.js
 3.7142857142857144
+Sam Sam Tommy Tim Sally Buck Bob
 ```
 
 ### 3.	How do you access the last element of any array?
@@ -118,18 +119,14 @@ nameLengths = [5, 3, 4] //create this new array
 ```
 
 ```
-// Create a new array called nameLengths. 
-// Write a loop to iterate over the previously created names array 
-// add the length of each name to the nameLengths array.
-
-
-var namesArray = ["Kelly", "Sam", "Kate"] //given this array
-var nameLengths = [] //create this new array
-
 for (const name of namesArray) {
-    nameLengths += name.length;
+    nameLengths.push(name.length);
 }
 console.log(nameLengths)
+```
+```
+C:\Program Files\nodejs\node.exe .\test.js
+(3) [5, 3, 4]
 ```
 
 ### 6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. 
@@ -153,7 +150,7 @@ C:\Program Files\nodejs\node.exe .\test.js
 
 ```
 function concatenatedToItself(word, n){
-    out = ""
+    var out = ""
     for (let i = 0; i < n; i++) {
         out += word;        
     }
