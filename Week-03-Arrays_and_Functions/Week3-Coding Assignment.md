@@ -30,11 +30,11 @@ var lastEl = ages.length - 1;
 
 console.log(ages[lastEl] - ages[0])
 ```
-
 ```
 "C:\Program Files\nodejs\node.exe" ".\Week 3 - Coding Assignment.js"
 90
 ``` 
+
 b. Add a new age to your array and repeat the step above to ensure it is dynamic. (works for arrays of different lengths).
 
 ```
@@ -59,19 +59,17 @@ c. Use a loop to iterate through the array and calculate the average age.
 ```
 var ages = [3, 9, 23, 64, 2, 8, 28, 93];
 ages.push(52);
-var lastEl = ages.length - 1;
 
 var total = 0;
 for (const age of ages) {
     total += age;
 }
-var average = total / lastEl;
+var average = total / ages.length;
 console.log(average)
 ```
-
 ```
-"C:\Program Files\nodejs\node.exe" ".\Week 3 - Coding Assignment.js"
-35.25
+C:\Program Files\nodejs\node.exe .\test.js
+31.333333333333332
 ```
 
 ### 2. Create an array called names that contains the following values: ‘Sam’, ‘Tommy’, ‘Tim’, ‘Sally’, ‘Buck’, ‘Bob’.
