@@ -40,7 +40,7 @@ function sayHi() {
 Manager.sayHi = sayHi
 
 /*
-functionManager
+Manager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
@@ -65,7 +65,7 @@ function objectNotationManager(name, age, job) {
 Manager = new objectNotationManager("Karina", 27, "Software Engineer")
 
 /*
-functionManager
+Manager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
@@ -92,11 +92,12 @@ class objectClassManager {
 Manager = new objectClassManager("Karina", 27, "Software Engineer")
 
 /*
-Object { name: "Karina", age: 27, job: "Software Engineer" }
-    age: 27
-    job: "Software Engineer"
-    name: "Karina"
-    <prototype>: Object { … }
-        constructor: class objectClassManager { constructor(name, age, job) }
-        sayHi: function sayHi()
+Manager
+    Object { name: "Karina", age: 27, job: "Software Engineer" }
+        age: 27
+        job: "Software Engineer"
+        name: "Karina"
+        <prototype>: Object { … }
+            constructor: class objectClassManager { constructor(name, age, job) }
+            sayHi: function sayHi()
 */
