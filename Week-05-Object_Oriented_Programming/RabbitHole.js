@@ -14,11 +14,34 @@ Manager.sayHi = sayHi;
 
 /*
 Manager
-    Object { name: "Karina", age: 27, job: "Software Engineer", sayHi: sayHi() }
-        age: 27
-        job: "Software Engineer"
-        name: "Karina"
-        sayHi: function sayHi()
+Object { name: "Karina", age: 27, job: "Software Engineer", sayHi: sayHi() }
+    age: 27
+    job: "Software Engineer"
+    name: "Karina"
+    sayHi: function sayHi()
+*/
+
+//================================================================
+
+// Object Literals but the function is inside the Object
+
+const Manager = {
+    name: "Karina",
+    age: 27,
+    job: "Software Engineer",
+    sayHi: function () {
+        console.log(`Hello, my name is ${this.name} and I was raun from within the Object`);
+    }
+};
+
+
+/*
+Manager
+Object { name: "Karina", age: 27, job: "Software Engineer", sayHi: sayHi() }
+    age: 27
+    job: "Software Engineer"
+    name: "Karina"
+    sayHi: function sayHi()
 */
 
 //================================================================
@@ -31,16 +54,15 @@ function objectNotationManager(name, age, job) {
     this.job = job;
 }
 
-Manager = new objectNotationManager("Karina", 27, "Software Engineer")
-
 function sayHi() {
     console.log(`Hello, my name is ${this.name}`);
 }
 
+Manager = new objectNotationManager("Karina", 27, "Software Engineer")
 Manager.sayHi = sayHi
 
 /*
-Manager
+functionManager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
@@ -65,7 +87,7 @@ function objectNotationManager(name, age, job) {
 Manager = new objectNotationManager("Karina", 27, "Software Engineer")
 
 /*
-Manager
+functionManager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
@@ -92,12 +114,11 @@ class objectClassManager {
 Manager = new objectClassManager("Karina", 27, "Software Engineer")
 
 /*
-Manager
-    Object { name: "Karina", age: 27, job: "Software Engineer" }
-        age: 27
-        job: "Software Engineer"
-        name: "Karina"
-        <prototype>: Object { … }
-            constructor: class objectClassManager { constructor(name, age, job) }
-            sayHi: function sayHi()
+Object { name: "Karina", age: 27, job: "Software Engineer" }
+    age: 27
+    job: "Software Engineer"
+    name: "Karina"
+    <prototype>: Object { … }
+        constructor: class objectClassManager { constructor(name, age, job) }
+        sayHi: function sayHi()
 */
