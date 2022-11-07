@@ -3,7 +3,7 @@
 ### 1. What are the four pillars of Object-Oriented Programming? Explain each pillar.
 
 - Abstraction
-Abstraction is in a nute shell only showing the necessary details. It completely cuts out all the the technical and leaves a user with just the necessary that they need to concern themselves with..
+Abstraction is in a nut shell only showing the necessary details. It completely cuts out all the the technical and leaves a user with just the necessary that they need to concern themselves with.
 
 - Encapsulation
 Is in the act of enclosing something. Encapsulation can be used to hide funcitonality, or features. 
