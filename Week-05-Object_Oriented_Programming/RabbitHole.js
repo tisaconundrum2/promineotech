@@ -14,11 +14,11 @@ Manager.sayHi = sayHi;
 
 /*
 Manager
-Object { name: "Karina", age: 27, job: "Software Engineer", sayHi: sayHi() }
-    age: 27
-    job: "Software Engineer"
-    name: "Karina"
-    sayHi: function sayHi()
+    Object { name: "Karina", age: 27, job: "Software Engineer", sayHi: sayHi() }
+        age: 27
+        job: "Software Engineer"
+        name: "Karina"
+        sayHi: function sayHi()
 */
 
 //================================================================
