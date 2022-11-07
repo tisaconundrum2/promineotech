@@ -13,11 +13,13 @@ Inheritance is the act of letting an  object acquire the properties and methods 
 Reusability is the main benefit here. We know sometimes that multiple places need to do the same thing, and they need to do everything the same except for one small part. This is a problem inheritance can solve.
 
 - Polymorphism
-fds
-
+Polymorphism itself means "the condition of occurring in several different forms." That is to say that with inheritance, behaviros can be shared, while allowing custom overrides. 
 
 ### 2. What is the relationship between a Class and an Object?
 
 ### 3. What is an exception and what are best practices for handling them?
 
 ### 4. What is your favorite thing you learned this week?
+
+# Citation
+https://www.freecodecamp.org/news/four-pillars-of-object-oriented-programming/
