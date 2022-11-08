@@ -62,7 +62,7 @@ Manager = new objectNotationManager("Karina", 27, "Software Engineer")
 Manager.sayHi = sayHi
 
 /*
-functionManager
+Manager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
@@ -87,7 +87,7 @@ function objectNotationManager(name, age, job) {
 Manager = new objectNotationManager("Karina", 27, "Software Engineer")
 
 /*
-functionManager
+Manager
     Object { name: "Karina notation", age: 27, job: "Software Engineer", sayHi: sayHi() }
         age: 27
         job: "Software Engineer"
