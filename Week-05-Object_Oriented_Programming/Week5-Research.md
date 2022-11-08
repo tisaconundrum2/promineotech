@@ -16,7 +16,7 @@ Reusability is the main benefit here. We know sometimes that multiple places nee
 Polymorphism itself means "the condition of occurring in several different forms." That is to say that with inheritance, behaviros can be shared, while allowing custom overrides. 
 
 ### 2. What is the relationship between a Class and an Object?
-What is a class?  Classes are a template for creating objects. They encapsulate data with code to work on that data. Classes in JS are built on prototypes but also have some syntax and semantics that are not shared with ES5 class-like semantics. 
+What is a class?  A Classes is a template for creating objects. They encapsulate data with code to work on that data. 
 
 What is an Object?  Objects are a standalone entity, with properties and type.
 
