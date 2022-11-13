@@ -1,0 +1,19 @@
+{
+    "name": "javascript-week5",
+    "version": "1.0.0",
+    "description": "",
+    "dependencies": {
+      "readline-sync": "^1.4.10"
+    },
+    "devDependencies": {
+      "chai": "^4.3.7",
+      "mocha": "^10.1.0"
+    },
+    "scripts": {
+      "test": "mocha"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+  }
+  
