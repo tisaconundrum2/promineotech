@@ -11,7 +11,7 @@ NicholasBoard.addNewItem("complete app", "You have an app that you need to compl
 NicholasBoard.addNewItem("submit app idea", "Go to promineotech and submit your completed app")
 NicholasBoard.displayTodoItems()
 
-Now to set it up as an actual usable selection, we'll setup a separate a Main() function.
+Now to set it up as an actual usable owner_selection, we'll setup a separate a Main() function.
 
 * Might make sense to have everything in an object
 */
@@ -58,7 +58,7 @@ Select a board
 0) John's Board
 1) Nicholas's Board
 e) Exit
-Make a selection
+Make a owner_selection
 Selection: 1
 
 You selected Nicholas's Board
@@ -85,7 +85,7 @@ Select a board
 0) John's Board
 1) Nicholas's Board
 e) Exit
-Make a selection
+Make a owner_selection
 Selection: e
 
 >Goodbye
@@ -116,35 +116,84 @@ class Item {
     }
 }
 
-/*
-class Menu {
-    constructor() {
-        this.owners = []
-    }
+let owners = [];
+let owner_selection = '';
 
-    start() {
-        this.showTitle();
-        while (true) {
-            if (this.owners.length === 0) {
-                console.log('Create a new board')
-                // this.owners.push(prompt("Name of board: "))
-                this.owners.push("John")
-            } else {
-                this.showTitle();
-                console.log("Select a board: ")
-                for (let i = 0; i < this.owners.length; i++){
-                    console.log()
-                }
-            }
+owners.push(new Owner("John"))
+owners.push(new Owner("Nicholas"))
+owners[0].addItem("10 pushup", "Hit the Gym and do pushups")
+// owners[1].addItem("finish coding", "Finish up your app idea")
+
+while (true) {
+    console.log('Welcome to the JS Todo App');
+    if (owners.length == 0) {
+        console.log('Please name your board');
+        owners.push(new Owner(prompt()));
+    } else {
+        console.log('Select a board')
+        let i = 0
+        for (const owner of owners) {
+            console.log(`${i}) ${owner.name}`)
+            i++
         }
+        console.log('e) Exit')
+        console.log('Make a selection: ')
+        owner_selection = prompt();
     }
 
-    showTitle() {
-        console.log('Welcome to the JS Todo App');
+    if (owner_selection === 'e') {
+        console.log('>Goodbye')
+        break;
     }
 
+    while (true) {
+
+        console.log("")
+        console.log(`You've selected ${owners[owner_selection].name}'s Board`)
+        console.log('Do you want to add an item? Y/N')
+        let y_n = prompt()
+
+        if (y_n === 'y' || y_n === 'Y') {
+            console.log('Add a Todo')
+            console.log("Title: ")
+            let title = prompt()
+            console.log('Add a description')
+            console.log('Description: ')
+            let description = prompt()
+            owners[owner_selection].addItem(title, description)
+        }
+
+        console.log('Select a Todo item to view')
+        i = 0;
+        for (const item of owners[owner_selection].items) {
+            console.log(`${i}) ${item.name}`)
+            i++;
+        }
+        console.log('e) Exit')
+        console.log('Make a selection: ')
+        item_selection = prompt()
+
+        if (item_selection === 'e') {
+            console.log('>Goodbye')
+            break
+        }
+
+        console.log("")
+        console.log(`${item_selection} - ${owners[owner_selection].items[item_selection].name}`)
+        console.log(`${owners[owner_selection].items[item_selection].description}`)
+        console.log("0) Mark as complete")
+        console.log("e) Exit")
+
+        complete_selection = prompt()
+
+        if (complete_selection === 'e') {
+            console.log('>Goodbye')
+            break
+        }
+
+        if (complete_selection === '0') {
+            owners[owner_selection].items[item_selection].name += " [Completed]";
+        }
+
+    }
 }
-
-let menu = new Menu();
-menu.start();
-*/
