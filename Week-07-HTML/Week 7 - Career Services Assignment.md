@@ -20,12 +20,17 @@ First American clearly thinks about how to leverage data in a market that
 
 ##### Describe a difficult work situation and how you overcame it.(STAR. Never speak negatively about anyone else or any companies. Perhaps talk about change you experiences, as change is always difficult to overcome.)
 
+
 ##### What are your goals for the future?(Make sure you answer in a time bound manner and talk about how you are looking to learn as much as possible in your field.)
 
+Technology is an ever growing constantly changing field and the best way to stay ahead of that us to be constantly upskilling and learning as much as possible. I feel that this company, given it's track record, would allow me to continue growing in this technology while still doing what I do best, which is solving problems.
 
 ##### Why are you leaving your last job?(Don’t say anything negative. Mention growth, changing industries, etc.)
 
+I really have appreciated the time I've spent at my current role, but I am looking to pivot and refocus on what I'm good at which is C# .NET. The current infrastructure is built using PHP for Wordpress and while I am familiar with the language, I do want to refocus my efforts on the language I've spent the most time in.
+
 ##### What is your salary expectation?
+I would like to learn more about the role and the budget you have in mind and what the current range may be.
 
-
-
+## Citation
+https://careers.firstam.com/job/-/-/39054/33721021136?utm_source=ziprecruiter&utm_medium=jobad&p_uid=P9x30mqLGR&utm_campaign=information_techonology&utm_content=pj_board&ss=paid&p_sid=JjJqsXb#intsrc=suggested-jobs
