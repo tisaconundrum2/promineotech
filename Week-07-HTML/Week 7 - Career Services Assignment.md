@@ -26,7 +26,7 @@ I was part of a company called Logicor that focused on providing a piece of soft
 
 ##### Describe a difficult work situation and how you overcame it.(STAR. Never speak negatively about anyone else or any companies. Perhaps talk about change you experiences, as change is always difficult to overcome.)
 
-
+At Lexis Nexis I was working with my then manager deciding how to dedicate time towards my programming career. There was much pushback in allowing me to take this next step as it would mean sacrificing time towards supporting Lexis Nexis's clients. Despite this pushback I was able to work with my team and dedicate a small portion of my day towards programming and clearing up small bugs and issues within the system.
 
 ##### What are your goals for the future?(Make sure you answer in a time bound manner and talk about how you are looking to learn as much as possible in your field.)
 
