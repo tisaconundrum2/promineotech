@@ -14,10 +14,11 @@ I understand that this company has been around since 1889 maintaining and curati
 
 ##### Why do you want this job? (Be very specific. Talk about what appeals to you about the role but focus more on the value you’ll add to the team and company rather than what the company will do for you.)
 
-First American clearly thinks about how to leverage data in a market that 
+First American clearly thinks about how to leverage data in a market that is constantly changing. I feel that it is important to be ahead of this curve and aware of the changes that come. First American is a great opportunity to be a part of this.
 
 ##### Why should we hire you? (Be very specific. Talk about your skills, passion, and willingness to continuously learn to be an asset.)
 
+Given my experience and expertise I feel that I would be able to provide a lot of value to the company. First American has a history of helping it's clients and I feel that I will be able to further that mission. I am teachable and trainable and ready to provide my strong work ethic and grit to assist clients and First American's mission.
 
 ##### What is your greatest professional achievement?(STAR)
 
