@@ -28,7 +28,7 @@ Meet the following
     - You can create a new meeting, start screen sharing, and start recording. 
     - This will create a video recording on your computer. 
 - This should then be uploaded to a publicly accessible site, such as YouTube. 
-    - Ensure the link you share isPUBLIC or UNLISTED!
+    - Ensure the link you share is PUBLIC or UNLISTED!
     - If it is not accessible by your grader, your project will be graded based on what they can access.
 
 ## Citations
