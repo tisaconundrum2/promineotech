@@ -26,16 +26,29 @@
 
 #### 2. Choose one of your favorite websites and identify 5 different HTML elements used on the website. Make sure to include the URL in your submission.
 
+I chose **YouTube** for this question. **Youtube** is quite an extensive site. After doing a quick scan I was able to pull out 45 uniq elements from the page. Here are 5 of the most interesting
+```
+<clipPath>
+<defs>
+<video>
+<template>
+<linearGradient>
+```
+
+`<clipPath>`
+The `<clipPath>` lets you mask a graphic by using a shape as a clipping path. The shape defines the area of the graphic to be rendered. All graphics that are defined outside of this shape are not drawn on in the final webpage.This is usually used in tandom with SVGs
+
+`<defs>`
+The `<defs>` element defines a group of graphics that will be used later. The content inside the <defs> element is not rendered, but it can be referenced by other elements via the use of the <use> element.
+
+`<video>`
+The `<video>` element embeds a media player which supports video playback into the document. It is also possible to use <video> for audio content, but most browsers provide a more appropriate user experience via the <audio> element.
+
+`<template>`
+The `<template>` HTML element allows to create markup that is not rendered immediately, but may be instantiated at some point during runtime. This is useful for defining small segments of reusable code (e.g. HTML snippets containing hyperlinks or UI control templates) that are used on multiple pages.
+
+`<linearGradient>`
+The `<linearGradient>` element lets authors define linear gradients to apply to other SVG elements. The linear gradient is defined by a gradient line and a spread radius. Its direction determines the progression of colours along the axis aligned with this gradient line.
+
 #### 3. What is your favorite thing you learned this week?
-
-
-## Instructions
-
-As developers, research is a constant part of our job. A common saying is that 90% of software development is Googling, and while that is an exaggeration, Google is a highly used tool in the role. This Research assignment is meant to go beyond the course curriculum and increase your understanding of relevant topics while exposing you to online resources you'll frequently use on the job. Please write a paragraph for two (2) of the above prompts and include URLs from where you found the information to cite your sources. Do not copy and paste text from the internet or any other source; use the information you find in your research, summarize, in your own words, the concepts. Plagiarism will result in a zero for the assignment as well as disciplinary actions.
-
-### This assignment is graded based on participation.
-
-### Create a .pdf file with your research findings:
-- To save as a .pdf, go to Save As or Export, then choose the file type .pdf. This will save a new version of your document as a .pdf.
-- If you have a Mac and use Pages, please make sure to export the final version of the document to a .pdf before submitting.
-
+I think my favorite thing I learned this week is how powerful each of the above elements are. I had always known of a few important elements that allow me to get a document looking how I want it, but never knew that there were so many ways to "skin a cat". Things have really changed since I've begam my web development journey.
