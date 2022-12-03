@@ -14,12 +14,12 @@
 ### Coding 
 Meet the following 
 [x] Create a website using only HTML.
-[ ] At least 3 pages with links to navigate between all pages present on each 
+[x] At least 3 pages with links to navigate between all pages present on each 
 [x] 2 different size headers
-[ ] list
-[ ] 3 images
+[x] list
+[x] 3 images
 [x] table
-[ ] form
+[x] form
 
 ### Video Steps:
 - Create a video, up to five minutes max, showing and explaining how your project works with an emphasis on the portions you contributed. 
