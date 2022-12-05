@@ -11,11 +11,12 @@
 - Submit this document as a .PDF file in the LMS.
 
 ### Coding Steps:
-- Style the website you made last week using CSS with the following requirements:
-- Use only external CSS file (no internal or inline styling)
-- Every element must be styled.
-- Create style rules using class, id, and element selectors.
-Video Steps:
+-[ ] Style the website you made last week using CSS with the following requirements:
+-[ ] Use only external CSS file (no internal or inline styling)
+-[ ] Every element must be styled.
+-[ ] Create style rules using class, id, and element selectors.
+
+### Video Steps:
 - Create a video, up to five minutes max, showing and explaining how your project works with an emphasis on the portions you contributed. 
 - This video should be done using screen share and voice over. 
 - This can easily be done using Zoom, although you don't have to use Zoom, it's just what we recommend. 
