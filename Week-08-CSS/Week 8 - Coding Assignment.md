@@ -1,8 +1,10 @@
 # Week 8: Coding Assignment
 
 ### URL to GitHub Repository:
+https://github.com/tisaconundrum2/promineotech/tree/main/Week-08-CSS/HTML_Page
 
 ### URL to Your Coding Assignment Video:
+https://youtu.be/K571-r_Lqmg
 
 ### Instructions:
 - In Visual Studio Code, write the code that accomplishes the objectives listed below and ensures that the code compiles and runs as directed. 
@@ -13,8 +15,8 @@
 ### Coding Steps:
 - Style the website you made last week using CSS with the following requirements:
 -[x] Use only external CSS file (no internal or inline styling)
--[ ] Every element must be styled.
--[ ] Create style rules using class, id, and element selectors.
+-[x] Every element must be styled.
+-[x] Create style rules using class, id, and element selectors.
 
 ### Video Steps:
 - Create a video, up to five minutes max, showing and explaining how your project works with an emphasis on the portions you contributed. 
