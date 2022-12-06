@@ -356,4 +356,6 @@ th {
     border-top: 1px solid #dee2e6;
 }
 
+.top-padding {
+    padding-top: 30px;
 }
