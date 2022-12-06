@@ -1,31 +1,23 @@
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: transparent;
-}
-
 body {
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
-    color: #212529;
     text-align: left;
-    background-color: #fff;
 }
 
 h1,
 h2 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h5 {
     margin-top: 0;
     margin-bottom: .5rem;
 }
@@ -39,7 +31,6 @@ a {
     color: #007bff;
     text-decoration: none;
     background-color: transparent;
-    -webkit-text-decoration-skip: objects;
 }
 
 a:hover {
@@ -72,43 +63,11 @@ input {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
-}
-
-button,
-input {
     overflow: visible;
 }
 
 button {
     text-transform: none;
-}
-
-button,
-html [type=button] {
-    -webkit-appearance: button;
-}
-
-[type=button]::-moz-focus-inner,
-button::-moz-focus-inner {
-    padding: 0;
-    border-style: none;
-}
-
-h1,
-h2 {
-    margin-bottom: .5rem;
-    font-family: inherit;
-    font-weight: 500;
-    line-height: 1.2;
-    color: inherit;
-}
-
-h1 {
-    font-size: 2.5rem;
-}
-
-h2 {
-    font-size: 2rem;
 }
 
 .container {
@@ -144,10 +103,7 @@ h2 {
 }
 
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
@@ -165,24 +121,17 @@ h2 {
 
 @media (min-width:576px) {
     .col-sm {
-        -ms-flex-preferred-size: 0;
         flex-basis: 0;
-        -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
         flex-grow: 1;
         max-width: 100%;
     }
 
     .col-sm-2 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 16.666667%;
         flex: 0 0 16.666667%;
         max-width: 16.666667%;
     }
 
     .col-sm-10 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.333333%;
         flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
@@ -202,9 +151,6 @@ h2 {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     border: 1px solid transparent;
     padding: .375rem .75rem;
@@ -254,52 +200,6 @@ h2 {
     margin-bottom: 1rem !important;
 }
 
-@media print {
-
-    *,
-    ::after,
-    ::before {
-        text-shadow: none !important;
-        box-shadow: none !important;
-    }
-
-    a:not(.btn) {
-        text-decoration: underline;
-    }
-
-    img {
-        page-break-inside: avoid;
-    }
-
-    h2,
-    p {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2 {
-        page-break-after: avoid;
-    }
-
-    body {
-        min-width: 992px !important;
-    }
-
-    .container {
-        min-width: 992px !important;
-    }
-}
-
-*,
-::after,
-::before {
-    box-sizing: border-box;
-}
-
-h5 {
-    margin-top: 0;
-    margin-bottom: .5rem;
-}
 
 p {
     margin-top: 0;
@@ -407,13 +307,9 @@ h5 {
 }
 
 .card {
+    width: 18rem;
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
     flex-direction: column;
     min-width: 0;
     word-wrap: break-word;
@@ -424,33 +320,12 @@ h5 {
 }
 
 .card-body {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 1.25rem;
 }
 
 .card-title {
     margin-bottom: .75rem;
-}
-
-@media print {
-
-    *,
-    ::after,
-    ::before {
-        text-shadow: none !important;
-        box-shadow: none !important;
-    }
-
-    img {
-        page-break-inside: avoid;
-    }
-
-    p {
-        orphans: 3;
-        widows: 3;
-    }
 }
 
 *,
@@ -481,25 +356,4 @@ th {
     border-top: 1px solid #dee2e6;
 }
 
-@media print {
-
-    *,
-    ::after,
-    ::before {
-        text-shadow: none !important;
-        box-shadow: none !important;
-    }
-
-    tr {
-        page-break-inside: avoid;
-    }
-
-    .table {
-        border-collapse: collapse !important;
-    }
-
-    .table td,
-    .table th {
-        background-color: #fff !important;
-    }
 }
