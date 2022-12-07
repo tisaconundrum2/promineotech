@@ -8,3 +8,7 @@ SaSS and LESS are CSS pre-processors, which means that they allow you to write C
 
 #### 3. What is your favorite thing you learned this week?
 It was interesting to learn about Clearfix. I've never found myself using it in my day to day, but now that I know about it. I might begin implementing it.
+
+## Citations
+"https://www.youtube.com/watch?v=2tC4PIlEz_o" CSS Clearfix
+"https://www.w3schools.com/howto/howto_css_clearfix.asp" How TO - Clear Floats (Clearfix)
