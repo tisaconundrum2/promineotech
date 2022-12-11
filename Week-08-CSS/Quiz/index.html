@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 
+        [x] Make the entire background blue.
+        [x] An id of "text-2" should have red font color.
+        [x] Any div with a class of "box" should have 
+            [x] 25% margins on all sides, 
+            [x] a black, 
+            [x] solid 
+            [x] 1px border, 
+            [x] with curved corners. (NOTE: make sure only div's with the class are targeted)
+        [x] All list items (li) should have a white background when they are hovered over.
+        [x] Every third row in any table should have a gray background.
+     -->
+    <style>
+        body {
+            background-color: blue;
+        }
+
+        #text-2 {
+            color: red;
+        }
+
+        div.box {
+            margin: 25%;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+            border-width: 1px;
+        }
+
+        li:hover {
+            background-color: white;
+        }
+
+        tr:nth-child(3n) {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        This is a test div
+    </div>
+    <div class="box">
+        <h1 id="text-2">Hello World</h1>
+
+        <ul>
+            <li>Lorem</li>
+            <li>ipsum</li>
+            <li>dolor</li>
+            <li>sit</li>
+            <li>amet</li>
+            <li>consectetur</li>
+            <li>adipisicing</li>
+            <li>elit.</li>
+        </ul>
+
+        <table>
+            <tr>
+                <th>Company</th>
+                <th>Contact</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Alfreds Futterkiste</td>
+                <td>Maria Anders</td>
+                <td>Germany</td>
+            </tr>
+            <tr>
+                <td>Centro comercial Moctezuma</td>
+                <td>Francisco Chang</td>
+                <td>Mexico</td>
+            </tr>
+            <tr>
+                <td>Ernst Handel</td>
+                <td>Roland Mendel</td>
+                <td>Austria</td>
+            </tr>
+            <tr>
+                <td>Island Trading</td>
+                <td>Helen Bennett</td>
+                <td>UK</td>
+            </tr>
+            <tr>
+                <td>Laughing Bacchus Winecellars</td>
+                <td>Yoshi Tannamuri</td>
+                <td>Canada</td>
+            </tr>
+            <tr>
+                <td>Magazzini Alimentari Riuniti</td>
+                <td>Giovanni Rovelli</td>
+                <td>Italy</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>
