@@ -1,0 +1,53 @@
+<!-- 
+[x] Template should span the entire width of the screen.
+[x] There should be three columns. 
+[x] The left and right column should each take up 25% the width of the screen when the viewport is anything larger than small. 
+[x] The middle column should take up the remaining 50% of the screen.
+[x] Inside the middle column there should be two more columns, 
+[x] the left column taking up 75% of the width of it's parent and 
+[x] the right column taking up the remaining 25% when the viewport is anything larger than small.
+[x] All columns should stack vertically and respond when the viewport is small. 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style>
+        div {
+            border-style: solid;
+            border-color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">25% width of screen</div>
+            
+            <div class="col-sm-6">
+                50% width of screen
+
+                <div class="row">
+                    <div class="col-sm-9">75% width of parent</div>
+                    <div class="col-sm-3">25% width of parent</div>
+                </div>
+            </div>
+            
+            <div class="col-sm-3">25% width of screen</div>
+        </div>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
