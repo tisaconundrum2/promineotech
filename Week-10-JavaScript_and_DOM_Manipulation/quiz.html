@@ -11,12 +11,17 @@
 <button id="p-button">Create</button>
 
 <script>
-    let btn = document.getElementById('p-button')
-    let input = document.getElementById('p-input')
+    let btn = document.getElementById('p-button');
+    let input = document.getElementById('p-input');
+    let div = document.getElementById('p-div');
+
     btn.onclick = () => {
         console.log('Adding a paragraph')
-        // get content of type text
-
-        // create an element and set the value of the input text
+        // create an element <p> 
+        // get content of type text and set the value of the input text
+        // append the new <p> to the <div>
+        let p = document.createElement('p');
+        p.innerHTML = input.value;
+        div.appendChild(p);
     }
 </script>
