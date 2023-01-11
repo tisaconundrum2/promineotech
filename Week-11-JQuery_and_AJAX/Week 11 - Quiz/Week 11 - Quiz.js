@@ -44,8 +44,16 @@ let input_table = [
   }
 ]
 
+// $('#myTable tr:last').after('<tr>...</tr><tr>...</tr>');
+// https://stackoverflow.com/questions/171027/adding-a-table-row-in-jquery
+
 for (const elem of input_table) {
-  console.log(elem.firstName);
-  console.log(elem.lastName);
-  console.log(elem.email);
+  $('#customer-table tr:last').after(
+    `
+              <tr>
+                  <td>${elem.firstName}</td>
+                  <td>${elem.lastName}</td>
+                  <td>${elem.email}</td>
+              </tr>
+  `);
 }
