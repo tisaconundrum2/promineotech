@@ -1,7 +1,7 @@
 # Week 10: Coding Assignment
 
 ### URL to GitHub Repository:
-
+https://github.com/tisaconundrum2/promineotech/tree/main/Week-10-JavaScript_and_DOM_Manipulation/App
 
 ### URL to Your Coding Assignment Video:
 https://youtu.be/vZwVyhBIx_4
