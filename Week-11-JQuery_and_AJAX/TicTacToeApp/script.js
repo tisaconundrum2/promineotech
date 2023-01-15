@@ -1,6 +1,11 @@
 var turn = true;
 
 $("button").on("click", function () {
+
+    if ($().hasClass("")) {
+        
+    }
+
     if (turn) {
         $("#screen").text("X's Turn");
         $(this).addClass("fa-regular fa-circle fa-3x");
@@ -10,3 +15,4 @@ $("button").on("click", function () {
     }
     turn = !turn; // My clever swap of two turns
 });
+
