@@ -6,11 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="./style.css">
     <title>Tic Tac Toe</title>
 </head>
 
 <body>
+    <div class="container-fluid text-center">
+        <h1>Tic Tac Toe</h1>
+    </div>
+    <div class="container-fluid text-center mt-3">
+        <h4 id="screen">
+            O's Turn
+        </h4>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4"></div>
@@ -55,9 +64,7 @@
                             </td>
                         </tr>
                     </table>
-                    <br>
-                    <br>
-                    <input type="button" class="reset btn btn-lg btn-danger btn-block" value="RESET" onclick="reset()" />
+                    <input type="button" class="reset btn btn-lg btn-danger btn-block mt-5" value="RESET" onclick="reset()" />
                 </center>
             </div>
             <div class="col-lg-4"></div>
