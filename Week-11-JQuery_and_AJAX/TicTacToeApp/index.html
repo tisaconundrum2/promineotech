@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--
+Citation: 
+    https://www.geeksforgeeks.org/create-a-tic-tac-toe-game-using-jquery/
 
+Explanation: 
+    Heavy use and guidance from Geeks for Geeks implementation, 
+    **BUT** the script.js is completely mine. I utilized some of what GG had offered, but felt that the code could be optimized more.
+    Basically, I took what they had and ran with it. 
+    
+    The biggest changes can be found in `isWinCheck()` and `validateConfiguration()`; functions which seek to simplify and clean up code offered by GG. 
+    I found that repeated code was heavily used here, and I needed to optimize it if it could be helped.
+    
+    I will say that I had the chance to learn more about how `.some()` could be used to check for truthy and falsey values within many possible outputs.
+    This method will prove a very useful in the future if I have to come across some kind of matrix manipulation again in JS.
+
+    I'm proud of this work, it's not a lot but I think it showcases several code design philosophies that make the overall script more readable.
+-->>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
