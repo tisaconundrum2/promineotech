@@ -86,16 +86,16 @@ class DOMManager {
             );
 
             for (let room of house.rooms) {
-                $(`#${house_.id}`).find('.card-body').append(
+                $(`#${house._id}`).find('.card-body').append(
                     `
                     <p>
                         <span id="name-${room._id}">
                             <strong>Name: </strong>${room.name}
                         </span>
                         <span id="area-${room._id}">
-                            <strong>Name: </strong>${room.area}
+                            <strong>Area: </strong>${room.area}
                         </span>
-                        <button class="btn btn-manager" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')"></button>
+                        <button class="btn btn-danger" onclick="DOMManager.deleteRoom('${house._id}', '${room._id}')">Delete Room</button>
                     </p>
                     `
                 )
@@ -103,7 +103,15 @@ class DOMManager {
         }
     }
 
-    static deleteRoom(house_id, room_id) {
+    static deleteRoom(house_id, room_id){
+        return;
+    }
+
+    static addRoom(house_id){
+        return;
+    }
+
+    static deleteHouse(house_id){
         return;
     }
 }
