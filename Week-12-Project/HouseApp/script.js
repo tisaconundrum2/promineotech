@@ -86,7 +86,7 @@ class DOMManager {
                             <input type="text" id="${house._id}-room-area" class="form-control" placeholder="Room Area">
                         </div>
                         <div class="col-sm">
-                            <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}')"
+                            <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}-room-name', '${house._id}-room-area')"
                                 class="btn btn-primary form-control">Add</button>
                         </div>
                     </div>
@@ -124,12 +124,23 @@ class DOMManager {
         }
     }
 
-    static deleteRoom(house_id, room_id) {
+    static deleteRoom(id_room_name, id_room_area) {
         return;
     }
 
-    static addRoom(house_id) {
-        return;
+    static addRoom(house_id, room_id) {
+        for (let house of this.houses) {
+            if (house._id == id){
+                house.rooms.push(new Rooms(id_room_name, id_room_area))
+                HouseService.updateHouse(house)
+                .then(() => {
+                    return HouseService.getAllHouses();
+                })
+                .then((houses) => {
+                    this.render(houses)
+                })
+            }
+        }
     }
 
     static deleteHouse(house_id) {
@@ -143,9 +154,14 @@ class DOMManager {
     static createHouse(name) {
         HouseService.createHouse(new House(name))
             .then(() => {
-                return
+                return HouseService.getAllHouses();
             })
+            .then((houses) => this.render(houses));
     }
 }
 
+$('#create-new-house').click(() => {
+    DOMManager.createHouse($('#new-house-name').val());
+    $('#new-house-name').val('');
+})
 DOMManager.getAllHouses();
