@@ -34,7 +34,7 @@ class HouseService {
     static updateHouse(house) {
         return $.ajax({
             url: `${this.url}/${house._id}`,
-            dataType: JSON,
+            dataType: 'JSON',
             data: JSON.stringify(house),
             contentType: 'application/json',
             type: 'PUT'
@@ -86,16 +86,13 @@ class DOMManager {
                             <input type="text" id="${house._id}-room-area" class="form-control" placeholder="Room Area">
                         </div>
                         <div class="col-sm">
-                            <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}-room-name', '${house._id}-room-area')"
+                            <button id="${house._id}-new-room" onclick="DOMManager.addRoom('${house._id}')"
                                 class="btn btn-primary form-control">Add</button>
                         </div>
                     </div>
-
                 </div>                
-
             </div>
         </div>
-
             `);
 
             for (let room of house.rooms) {
@@ -128,17 +125,17 @@ class DOMManager {
         return;
     }
 
-    static addRoom(house_id, room_id) {
+    static addRoom(id) {
         for (let house of this.houses) {
-            if (house._id == id){
-                house.rooms.push(new Rooms(id_room_name, id_room_area))
+            if (house._id == id) {
+                var room_name = $(`#${house._id}-room-name`).val();
+                var room_area = $(`#${house._id}-room-area`).val();
+                house.rooms.push(new Rooms(room_name, room_area));
                 HouseService.updateHouse(house)
-                .then(() => {
-                    return HouseService.getAllHouses();
-                })
-                .then((houses) => {
-                    this.render(houses)
-                })
+                    .then(() => {
+                        return HouseService.getAllHouses();
+                    })
+                    .then((houses) => this.render(houses))
             }
         }
     }
