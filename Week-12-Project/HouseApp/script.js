@@ -121,8 +121,21 @@ class DOMManager {
         }
     }
 
-    static deleteRoom(id_room_name, id_room_area) {
-        return;
+    static deleteRoom(house_id, room_id) {
+        for (let house of this.houses) {
+            if (house._id == house_id) {
+                for (const room of house.rooms) {
+                    if (room._id == room_id) {
+                        house.rooms.splice(house.rooms.indexOf(room), 1);
+                        HouseService.updateHouse(house)
+                            .then(() => {
+                                return HouseService.getAllHouses();
+                            })
+                            .then((houses) => this.render(houses));
+                    }
+                }
+            }
+        }
     }
 
     static addRoom(id) {
