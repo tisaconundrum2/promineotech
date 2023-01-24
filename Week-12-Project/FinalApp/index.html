@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>Employee Editor</title>
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">employee_name</th>
+                    <th scope="col">employee_salary</th>
+                    <th scope="col">employee_age</th>
+                    <th scope="col">profile_image</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                <tr>
+                    <td>1</td>
+                    <td>Tiger Nixon</td>
+                    <td>320800</td>
+                    <td>61</td>
+                    <td>""</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Garrett Winters</td>
+                    <td>170750</td>
+                    <td>63</td>
+                    <td>""</td>
+                    <td><button class="btn btn-primary">Edit</button></td>
+                    <td><button class="btn btn-danger">Delete</button></td>
+                </tr>
+                <script>
+                    /**
+                     * Get the EmployeeModel from the EmployeeController
+                     * Render everything here using a for loop
+                     * that loops through the array of returned items
+                     *
+                     * for each item returned from the script
+                     */
+                     import { EmployeeController } from "./EmployeeController";
+                    $("#table").empty();
+                    let employees = new EmployeeController().read();
+                    for (const employee of employees) {
+                        $("#table").prepend(`
+                        <tr>
+                            <td>${employee.id}</td>
+                            <td>Tiger Nixon</td>
+                            <td>320800</td>
+                            <td>61</td>
+                            <td>""</td>
+                            <td><button class="btn btn-primary">Edit</button></td>
+                            <td><button class="btn btn-danger">Delete</button></td>
+                        </tr>
+                        `)
+                    }
+                </script>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./EmployeeController.js"></script>
+</body>
+
+</html>
