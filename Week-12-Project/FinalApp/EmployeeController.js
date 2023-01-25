@@ -1,6 +1,6 @@
 import { EmployeeModel } from "./EmployeeModel.js";
 
-class EmployeeController {
+export class EmployeeController {
     url;
     offlineData;
 
@@ -181,6 +181,7 @@ class EmployeeController {
             "message": "Successfully! All records has been fetched."
         }
     }
+    
     /**
      * Take in an EmployeeModel and add it to the database
      * @param {EmployeeModel} employeeModel 
