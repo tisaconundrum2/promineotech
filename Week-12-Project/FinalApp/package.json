@@ -12,6 +12,5 @@
   "dependencies": {
     "bootstrap": "^4.0.0",
     "jquery": "^3.6.3"
-  },
-  "type": "module"
+  }
 }

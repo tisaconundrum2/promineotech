@@ -1,6 +1,22 @@
-import { EmployeeModel } from "./EmployeeModel.js";
+class EmployeeModel {
+    id;
+    employee_name;
+    employee_salary;
+    employee_age;
+    profile_image;
+    url;
 
-export class EmployeeController {
+    constructor(id, employee_name, employee_salary, employee_age, profile_image) {
+        this.id = id;
+        this.employee_name = employee_name;
+        this.employee_salary = employee_salary;
+        this.employee_age = employee_age;
+        this.profile_image = profile_image;
+    }
+}
+
+
+class EmployeeController {
     url;
     offlineData;
 
@@ -181,7 +197,7 @@ export class EmployeeController {
             "message": "Successfully! All records has been fetched."
         }
     }
-    
+
     /**
      * Take in an EmployeeModel and add it to the database
      * @param {EmployeeModel} employeeModel 
@@ -200,7 +216,7 @@ export class EmployeeController {
      * Read all the employees from the payload and return them as an array
      * @returns [EmployeeModel, ...]
      */
-    read() {
+    readAll() {
         let employees = [];
         // let payload = $.get(this.url + "/employees");
         let payload = this.offlineData;
@@ -223,7 +239,7 @@ export class EmployeeController {
      * @param {int} id 
      * @returns a sing EmployeeModel
      */
-    read(id) {
+    readOne(id) {
         let employee = $.get(this.url + "/employee/" + id);
         return new EmployeeModel(
             employee["data"]["id"],
@@ -258,3 +274,37 @@ export class EmployeeController {
         return $.get(this.url + "/delete/" + id);
     }
 }
+
+
+class EmployeeView {
+    render() {
+        /**
+         * Get the EmployeeModel from the EmployeeController
+         * Render everything here using a for loop
+        * that loops through the array of returned items
+         *
+         * for each item returned from the script
+         */
+        $("#table").empty();
+        let employees = new EmployeeController().readAll();
+        for (let employee of employees) {
+            $("#table").append(`
+                    <tr>
+                        <td>${employee.id}</td>
+                        <td>${employee.employee_name}</td>
+                        <td>${employee.employee_salary}</td>
+                        <td>${employee.employee_age}</td>
+                        <td>${employee.profile_image}</td>
+                        <td><button class="btn btn-primary">Edit</button></td>
+                        <td><button class="btn btn-danger">Delete</button></td>
+                    </tr>
+                    `)
+        }
+    }
+
+    create(){}
+    edit(id){}
+    delete(id){}
+}
+
+new EmployeeView().render();
