@@ -295,16 +295,36 @@ class EmployeeView {
                         <td>${employee.employee_salary}</td>
                         <td>${employee.employee_age}</td>
                         <td>${employee.profile_image}</td>
-                        <td><button class="btn btn-primary">Edit</button></td>
-                        <td><button class="btn btn-danger">Delete</button></td>
+                        <td><button class="btn btn-primary" id="${employee.id}">Edit</button></td>
+                        <td><button class="btn btn-danger" id="${employee.id}"">Delete</button></td>
                     </tr>
                     `)
         }
     }
 
-    create(){}
-    edit(id){}
-    delete(id){}
+    create(name, salary, age) {
+        console.log(name.val())
+        console.log(salary.val())
+        console.log(age.val())
+    }
+
+    edit(id) { }
+
+    delete(id) { }
 }
 
 new EmployeeView().render();
+
+// Create
+$("#create-house").on("click", () => {
+    new EmployeeView().create(
+        $("#new-employee-name")
+        , $("#new-employee-salary")
+        , $("#new-employee-age")
+    )
+}
+)
+
+//Edit
+
+//Delete
