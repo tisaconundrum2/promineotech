@@ -295,8 +295,8 @@ class EmployeeView {
                         <td>${employee.employee_salary}</td>
                         <td>${employee.employee_age}</td>
                         <td>${employee.profile_image}</td>
-                        <td><button class="btn btn-primary" id="${employee.id}">Edit</button></td>
-                        <td><button class="btn btn-danger" id="${employee.id}"">Delete</button></td>
+                        <td><button class="btn btn-primary" onClick="EmployeeView.delete(${employee.id})">Edit</button></td>
+                        <td><button class="btn btn-danger" onclick="EmployeeView.delete(${employee.id})"">Delete</button></td>
                     </tr>
                     `)
         }
