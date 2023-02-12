@@ -203,7 +203,7 @@ class EmployeeController {
      * @param {EmployeeModel} employeeModel 
      * @returns returns 200 when an Employee is created
      */
-    create(employeeModel) {
+    static create(employeeModel) {
         const employee = {
             "name": employeeModel.employee_name,
             "salary": employeeModel.employee_salary,
@@ -216,7 +216,7 @@ class EmployeeController {
      * Read all the employees from the payload and return them as an array
      * @returns [EmployeeModel, ...]
      */
-    readAll() {
+    static readAll() {
         let employees = [];
         // let payload = $.get(this.url + "/employees");
         let payload = this.offlineData;
@@ -239,7 +239,7 @@ class EmployeeController {
      * @param {int} id 
      * @returns a sing EmployeeModel
      */
-    readOne(id) {
+    static readOne(id) {
         let employee = $.get(this.url + "/employee/" + id);
         return new EmployeeModel(
             employee["data"]["id"],
@@ -255,7 +255,7 @@ class EmployeeController {
      * @param {EmployeeModel} employeeModel 
      * @returns a potential 200 code that it successfully updated employee
      */
-    update(employeeModel) {
+    static update(employeeModel) {
         return $.ajax({
             url: this.url + "/update/" + employeeModel.id,
             dataType: 'JSON',
@@ -302,22 +302,26 @@ class EmployeeView {
         }
     }
 
-    create(name, salary, age) {
-        console.log(name.val())
-        console.log(salary.val())
-        console.log(age.val())
+    static create(name, salary, age) {
+        console.table([name.val(), salary.val(), age.val()])
     }
 
-    edit(id) { }
+    static delete(id){
+        let result =  EmployeeController.delete(id);
+        $('.toast-body').empty();
+        $('.toast-body').append(`Deleted ${id}, ${result}`);
+        $(".toast").toast('show');
+    }
 
-    delete(id) { }
+    static edit(id) { }
+
 }
 
-new EmployeeView().render();
+EmployeeView.render();
 
 // Create
 $("#create-house").on("click", () => {
-    new EmployeeView().create(
+    EmployeeView.create(
         $("#new-employee-name")
         , $("#new-employee-salary")
         , $("#new-employee-age")
