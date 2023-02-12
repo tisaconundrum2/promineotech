@@ -203,7 +203,7 @@ class EmployeeController {
      * @param {EmployeeModel} employeeModel 
      * @returns returns 200 when an Employee is created
      */
-    static create(employeeModel) {
+    create(employeeModel) {
         const employee = {
             "name": employeeModel.employee_name,
             "salary": employeeModel.employee_salary,
@@ -216,7 +216,7 @@ class EmployeeController {
      * Read all the employees from the payload and return them as an array
      * @returns [EmployeeModel, ...]
      */
-    static readAll() {
+    readAll() {
         let employees = [];
         // let payload = $.get(this.url + "/employees");
         let payload = this.offlineData;
@@ -239,7 +239,7 @@ class EmployeeController {
      * @param {int} id 
      * @returns a sing EmployeeModel
      */
-    static readOne(id) {
+    readOne(id) {
         let employee = $.get(this.url + "/employee/" + id);
         return new EmployeeModel(
             employee["data"]["id"],
@@ -255,7 +255,7 @@ class EmployeeController {
      * @param {EmployeeModel} employeeModel 
      * @returns a potential 200 code that it successfully updated employee
      */
-    static update(employeeModel) {
+    update(employeeModel) {
         return $.ajax({
             url: this.url + "/update/" + employeeModel.id,
             dataType: 'JSON',
@@ -295,29 +295,29 @@ class EmployeeView {
                         <td>${employee.employee_salary}</td>
                         <td>${employee.employee_age}</td>
                         <td>${employee.profile_image}</td>
-                        <td><button class="btn btn-primary" onClick="EmployeeView.delete(${employee.id})">Edit</button></td>
-                        <td><button class="btn btn-danger" onclick="EmployeeView.delete(${employee.id})"">Delete</button></td>
+                        <td><button class="btn btn-primary" onClick="new EmployeeView().delete(${employee.id})">Edit</button></td>
+                        <td><button class="btn btn-danger" onclick="new EmployeeView().delete(${employee.id})"">Delete</button></td>
                     </tr>
                     `)
         }
     }
 
-    static create(name, salary, age) {
+    create(name, salary, age) {
         console.table([name.val(), salary.val(), age.val()])
     }
 
-    static delete(id){
-        let result =  EmployeeController.delete(id);
+    delete(id) {
+        let result = new EmployeeController().delete(id);
         $('.toast-body').empty();
         $('.toast-body').append(`Deleted ${id}, ${result}`);
         $(".toast").toast('show');
     }
 
-    static edit(id) { }
+    edit(id) { }
 
 }
 
-EmployeeView.render();
+new EmployeeView().render();
 
 // Create
 $("#create-house").on("click", () => {
