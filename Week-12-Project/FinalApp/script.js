@@ -216,9 +216,9 @@ class EmployeeController {
      * Read all the employees from the payload and return them as an array
      * @returns [EmployeeModel, ...]
      */
-    readAll() {
+    async readAll() {
         let employees = [];
-        // let payload = $.get(this.url + "/employees");
+        // let payload = await $.get(this.url + "/employees");
         let payload = this.offlineData;
         for (let employee of payload["data"]) {
             employees.push(
@@ -239,8 +239,8 @@ class EmployeeController {
      * @param {int} id 
      * @returns a sing EmployeeModel
      */
-    readOne(id) {
-        let employee = $.get(this.url + "/employee/" + id);
+    async readOne(id) {
+        let employee = await $.get(this.url + "/employee/" + id);
         return new EmployeeModel(
             employee["data"]["id"],
             employee["data"]["employee_name"],
@@ -256,10 +256,15 @@ class EmployeeController {
      * @returns a potential 200 code that it successfully updated employee
      */
     update(employeeModel) {
+        const employee = {
+            "name": employeeModel.employee_name,
+            "salary": employeeModel.employee_salary,
+            "age": employeeModel.employee_age
+        };
         return $.ajax({
             url: this.url + "/update/" + employeeModel.id,
             dataType: 'JSON',
-            data: JSON.stringify(employeeModel),
+            data: JSON.stringify(employee),
             contentType: 'application/json',
             type: 'PUT'
         });
@@ -277,7 +282,7 @@ class EmployeeController {
 
 
 class EmployeeView {
-    render() {
+    async render() {
         /**
          * Get the EmployeeModel from the EmployeeController
          * Render everything here using a for loop
@@ -286,16 +291,16 @@ class EmployeeView {
          * for each item returned from the script
          */
         $("#table").empty();
-        let employees = new EmployeeController().readAll();
+        let employees = await new EmployeeController().readAll();
         for (let employee of employees) {
             $("#table").append(`
-                    <tr>
+                    <tr id="employee-${employee.id}">
                         <td>${employee.id}</td>
                         <td>${employee.employee_name}</td>
                         <td>${employee.employee_salary}</td>
                         <td>${employee.employee_age}</td>
                         <td>${employee.profile_image}</td>
-                        <td><button class="btn btn-primary" onClick="new EmployeeView().delete(${employee.id})">Edit</button></td>
+                        <td><button class="btn btn-primary" onClick="new EmployeeView().edit(${employee.id})">Edit</button></td>
                         <td><button class="btn btn-danger" onclick="new EmployeeView().delete(${employee.id})"">Delete</button></td>
                     </tr>
                     `)
@@ -303,28 +308,62 @@ class EmployeeView {
     }
 
     create(name, salary, age) {
-        console.table([name.val(), salary.val(), age.val()])
+        let employee = new EmployeeModel();
+        employee.employee_name = name.val();
+        employee.employee_salary = salary.val();
+        employee.employee_age = age.val();
+        new EmployeeController().create(employee).always((result) => {
+            $('.toast-body').empty();
+            $('.toast-body').append(`Created ${id}, ${result.responseJSON?.message}`);
+            $(".toast").toast('show');
+            this.render();
+        });
     }
 
     delete(id) {
-        let result = new EmployeeController().delete(id);
-        $('.toast-body').empty();
-        $('.toast-body').append(`Deleted ${id}, ${result}`);
-        $(".toast").toast('show');
+        new EmployeeController().delete(id).always((result) => {
+            $('.toast-body').empty();
+            $('.toast-body').append(`Deleted ${id}, ${result.responseJSON?.message}`);
+            $(".toast").toast('show');
+            this.render();
+        });
     }
 
-    edit(id) { }
+    async edit(id) {
+        let employee = await new EmployeeController().readOne(id);
+        $(`#employee-${id}`).empty()
+        $(`#employee-${id}`).append(`
+            <td>${id}</td>
+            <td><input type="text" id="new-employee-${id}-name" class="form-control" value="${employee.employee_name}"></td>
+            <td><input type="text" id="new-employee-${id}-salary" class="form-control" value="${employee.employee_salary}"></td>
+            <td><input type="text" id="new-employee-${id}-age" class="form-control" value="${employee.employee_age}"></td>
+            <td></td>
+            <td><button class="btn btn-primary" onClick="new EmployeeView().update(${id})">Save</button></td>
+            <td><button class="btn btn-danger" onclick="new EmployeeView().delete(${id})"">Delete</button></td>
+        `)
+    }
+
+    update(id) {
+        let employee = new EmployeeModel();
+        employee.employee_name = $(`#new-employee-${id}-name`).val();
+        employee.employee_salary = $(`#new-employee-${id}-salary`).val();
+        employee.employee_age = $(`#new-employee-${id}-age`).val();
+        new EmployeeController().update(employee).always((result) => {
+            $('.toast-body').empty();
+            $('.toast-body').append(`Updated ${id}, ${result.responseJSON?.message}`);
+            $(".toast").toast('show');
+            this.render();
+        });
+    }
 
 }
 
 new EmployeeView().render();
 
 // Create
-$("#create-house").on("click", () => {
-    EmployeeView.create(
-        $("#new-employee-name")
-        , $("#new-employee-salary")
-        , $("#new-employee-age")
+$("#create-employee").on("click", () => {
+    new EmployeeView().create(
+        $("#new-employee-name"), $("#new-employee-salary"), $("#new-employee-age")
     )
 }
 )
